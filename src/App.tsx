@@ -1,9 +1,9 @@
 import './App.css';
+import { type ReactElement, useState } from 'react';
 import reactLogo from './assets/react.svg';
-import { useState } from 'react';
 import viteLogo from '/vite.svg';
 
-function App() {
+function App(): ReactElement {
   const [count, setCount] = useState(0);
 
   return (

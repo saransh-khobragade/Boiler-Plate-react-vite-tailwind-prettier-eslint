@@ -10,5 +10,6 @@
   "arrowParens": "avoid",
   "endOfLine": "lf",
   "jsxSingleQuote": true,
-  "quoteProps": "as-needed"
+  "quoteProps": "as-needed",
+  "spaceBeforeFunctionParen": false
 }
