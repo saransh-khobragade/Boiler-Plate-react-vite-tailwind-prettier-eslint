@@ -26,7 +26,7 @@ yarn format
 
 ## 🔧 ESLint on Save Setup
 
-This project is configured to show ESLint errors and warnings on save in VS Code. The setup includes:
+This project is configured to show ESLint errors and warnings on save in VS Code with **STRICT** linting rules. The setup includes:
 
 ### Required VS Code Extensions
 
@@ -37,23 +37,53 @@ This project is configured to show ESLint errors and warnings on save in VS Code
 
 ### Features
 
-- ✅ ESLint errors and warnings shown in real-time
+- ✅ **STRICT** ESLint errors and warnings shown in real-time
 - ✅ Auto-fix on save for ESLint issues
 - ✅ Prettier formatting on save
 - ✅ TypeScript IntelliSense and error checking
 - ✅ Conventional commit message validation
 - ✅ Pre-commit hooks for linting and formatting
 
-### ESLint Rules
+### 🚨 Strict ESLint Rules
 
-The project includes strict ESLint rules:
+#### TypeScript Strict Rules
 
-- `no-console` - Warns about console statements
-- `no-unused-vars` - Errors on unused variables
-- `prefer-const` - Enforces const over let when possible
-- `no-var` - Prevents var usage
-- `react-hooks/rules-of-hooks` - Enforces React hooks rules
-- `react-hooks/exhaustive-deps` - Warns about missing dependencies
+- `@typescript-eslint/no-explicit-any` - Bans `any` type usage
+- `@typescript-eslint/no-non-null-assertion` - Bans `!` non-null assertions
+- `@typescript-eslint/no-unsafe-*` - Bans unsafe TypeScript operations
+- `@typescript-eslint/prefer-nullish-coalescing` - Enforces `??` over `||`
+- `@typescript-eslint/prefer-optional-chain` - Enforces `?.` over `&&`
+- `@typescript-eslint/consistent-type-imports` - Enforces consistent import types
+- `@typescript-eslint/no-floating-promises` - Bans unhandled promises
+- `@typescript-eslint/await-thenable` - Enforces proper async/await usage
+
+#### JavaScript Strict Rules
+
+- `no-console` - **ERROR**: Bans console statements
+- `no-debugger` - **ERROR**: Bans debugger statements
+- `no-eval` - **ERROR**: Bans eval usage
+- `no-var` - **ERROR**: Bans var declarations
+- `prefer-const` - **ERROR**: Enforces const over let
+- `no-duplicate-imports` - **ERROR**: Bans duplicate imports
+- `prefer-template` - **ERROR**: Enforces template literals
+- `object-shorthand` - **ERROR**: Enforces object shorthand
+- `prefer-destructuring` - **ERROR**: Enforces destructuring
+
+#### React Strict Rules
+
+- `react-hooks/rules-of-hooks` - **ERROR**: Enforces hooks rules
+- `react-hooks/exhaustive-deps` - **ERROR**: Enforces complete dependencies
+
+#### Code Style Rules
+
+- `sort-imports` - **ERROR**: Enforces alphabetical import sorting
+- `quotes` - **ERROR**: Enforces single quotes
+- `semi` - **ERROR**: Enforces semicolons
+- `comma-dangle` - **ERROR**: Enforces trailing commas
+- `indent` - **ERROR**: Enforces 2-space indentation
+- `space-before-function-paren` - **ERROR**: Enforces function spacing
+- `object-curly-spacing` - **ERROR**: Enforces object spacing
+- `array-bracket-spacing` - **ERROR**: Enforces array spacing
 
 ### VS Code Settings
 
