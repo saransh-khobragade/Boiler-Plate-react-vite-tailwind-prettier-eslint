@@ -140,7 +140,6 @@ export default tseslint.config([
       'array-bracket-spacing': ['error', 'never'],
       'computed-property-spacing': ['error', 'never'],
       'space-in-parens': ['error', 'never'],
-      'space-before-function-paren': ['error', 'always'],
       'space-before-blocks': 'error',
       'keyword-spacing': 'error',
       'space-infix-ops': 'error',

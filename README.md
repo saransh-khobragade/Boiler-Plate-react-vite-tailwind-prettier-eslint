@@ -28,6 +28,78 @@ yarn format
 
 This project is configured to show ESLint errors and warnings on save in VS Code with **STRICT** linting rules. The setup includes:
 
+### 📦 Installing VS Code Extensions
+
+This project includes recommended extensions that will be automatically suggested when you open it in VS Code. Here's how to install them:
+
+#### **Method 1: Via VS Code UI (Recommended)**
+
+1. **Open VS Code** in your project directory
+2. **Press `Cmd+Shift+P`** (Mac) or `Ctrl+Shift+P` (Windows/Linux)
+3. **Type "Extensions: Show Recommended Extensions"** and press Enter
+4. **Click "Install All"** or install them individually
+
+#### **Method 2: Via Extensions Panel**
+
+1. **Open VS Code**
+2. **Press `Cmd+Shift+X`** (Mac) or `Ctrl+Shift+X` (Windows/Linux) to open Extensions
+3. **Look for the "RECOMMENDED" section** at the top
+4. **Click "Install All"** or install them individually
+
+#### **Method 3: Via Command Palette**
+
+1. **Press `Cmd+Shift+P`** (Mac) or `Ctrl+Shift+P` (Windows/Linux)
+2. **Type "Extensions: Install Extensions from Workspace Recommendations"**
+3. **Press Enter**
+
+#### **Method 4: Via Terminal**
+
+```bash
+# Install all recommended extensions via terminal
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension esbenp.prettier-vscode
+code --install-extension ms-vscode.vscode-typescript-next
+code --install-extension bradlc.vscode-tailwindcss
+code --install-extension ms-vscode.vscode-json
+```
+
+### 🔍 Troubleshooting ESLint Issues
+
+If you're not seeing ESLint errors in VS Code:
+
+#### **1. Check if Extensions are Installed**
+
+- Open Extensions panel (`Cmd+Shift+X` or `Ctrl+Shift+X`)
+- Search for "ESLint" and ensure it's installed and enabled
+- Look for a green checkmark next to the extension
+
+#### **2. Reload VS Code**
+
+- Press `Cmd+Shift+P` (Mac) or `Ctrl+Shift+P` (Windows/Linux)
+- Type "Developer: Reload Window" and press Enter
+
+#### **3. Check ESLint Status**
+
+- Open the Output panel (`View > Output`)
+- Select "ESLint" from the dropdown
+- Look for any error messages
+
+#### **4. Verify ESLint is Working**
+
+- Open any `.ts` or `.tsx` file
+- Add `console.log('test');` - you should see a red squiggly line
+- If you don't see errors, try restarting VS Code
+
+#### **5. Check ESLint Configuration**
+
+```bash
+# Test ESLint manually
+npx eslint src/App.tsx
+
+# Test the entire project
+npx eslint src/ --ext .ts,.tsx
+```
+
 ### Required VS Code Extensions
 
 - **ESLint** (`dbaeumer.vscode-eslint`) - For ESLint integration
