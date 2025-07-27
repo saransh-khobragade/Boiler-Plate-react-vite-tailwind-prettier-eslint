@@ -237,7 +237,7 @@ Valid commit message formats:
 ├── tsconfig.json        # TypeScript configuration
 ├── eslint.config.js     # ESLint configuration
 ├── .prettierrc          # Prettier configuration
-├── tailwind.config.js   # Tailwind CSS configuration
+├── vite.config.ts       # Vite configuration with Tailwind CSS
 └── package.json         # Project dependencies and scripts
 ```
 
